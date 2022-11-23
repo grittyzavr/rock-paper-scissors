@@ -1,3 +1,7 @@
+// TODO:
+// 1)Complete the game.
+// 2)Refactor code. (like in frontend project, gameengine etc.)
+// 3)That should looks good.(at this moment page looks like shit)
 const elementRock = document.getElementById('rock');
 const elementScissors = document.getElementById('paper');
 const elementPaper = document.getElementById('scissors');
