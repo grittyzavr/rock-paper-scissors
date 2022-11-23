@@ -14,17 +14,21 @@ function rock() {
     let currentHand = 'rock';
     elementScissors.remove()
     elementPaper.remove()
-    enemyHand();
+    if (enemyHand() === currentHand) {
+        console.log(1);
+    }
 }
 function scissors() {
     let currentHand = 'scissors';
     elementPaper.remove();
     elementRock.remove();
+    enemyHand();
 }
 function paper() {
     let currentHand = 'paper';
     elementRock.remove();
     elementScissors.remove()
+    enemyHand();
 }
 function pickRandomProperty(obj) {
     let result;
@@ -35,7 +39,9 @@ function pickRandomProperty(obj) {
     return result;
 }
 function enemyHand() {
+  const randomHand = pickRandomProperty(hand);
   const myImage = new Image();
-  myImage.src = hand[`${pickRandomProperty(hand)}`];
+  myImage.src = hand[`${randomHand}`];
   document.body.appendChild(myImage);
+  return randomHand;
 }
